@@ -2,90 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AJ Simon ✨</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #ffdde1, #ee9ca7);
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    h1 {
-      font-family: 'Pacifico', cursive;
-      font-size: 4rem;
-      color: #fff;
-      margin-bottom: 0.5em;
-      animation: float 3s ease-in-out infinite;
-    }
-
-    p {
-      font-size: 1.3rem;
-      color: #fff;
-      max-width: 600px;
-      text-align: center;
-    }
-
-    a {
-      color: #ffeaa7;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
-    }
-
-    .bubble {
-      position: absolute;
-      bottom: -100px;
-      width: 30px;
-      height: 30px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      animation: rise 10s infinite ease-in;
-    }
-
-    @keyframes rise {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-110vh) scale(0.5);
-        opacity: 0;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AJ Simon • Neuroscience + Art</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <h1>Hey, I'm AJ 🌈</h1>
-  <p>Neuroscience, networks, and nasty HTML tricks.  
-     Come waste your time productively with me on <a href="https://github.com/asimon445" target="_blank">GitHub</a>.</p>
+  <header class="site-header">
+    <nav class="nav-bar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="research.html">Research</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="blog.html">Blog / Philosophy</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </header>
 
-  <!-- aesthetic bubbles -->
-  <div class="bubble" style="left: 10%"></div>
-  <div class="bubble" style="left: 25%; animation-delay: 2s;"></div>
-  <div class="bubble" style="left: 40%; animation-delay: 4s;"></div>
-  <div class="bubble" style="left: 55%; animation-delay: 1s;"></div>
-  <div class="bubble" style="left: 70%; animation-delay: 3s;"></div>
-  <div class="bubble" style="left: 85%; animation-delay: 5s;"></div>
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>AJ Simon</h1>
+        <p>Neuroscience, networks, art — exploring the intersection of brain & beauty</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h2>Welcome</h2>
+      <p>This is a place where my science and my soul meet. Browse around to see my work, thoughts, and passions.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 AJ Simon</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
 </body>
 </html>
+
