@@ -36,21 +36,21 @@ a:hover {
   font-weight: 600;
 }
 
-
+/* Headshot formatting */
 .headshot-wrapper {
   position: absolute;
-  top: 80px;
-  left: 100px;
+  top: 100px;   /* move up or down */
+  left: 100px;  /* move left or right */
   z-index: 10;
 }
 
 .headshot {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
+  width: 120px;  /* smaller */
+  height: 120px;
   border-radius: 50%;
-  border: 4px solid white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
 /* Hero Section */
