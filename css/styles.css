@@ -7,10 +7,6 @@
 }
 
 body {
-  background: pink !important;
-}
-
-body {
   font-family: 'Open Sans', sans-serif;
   color: #222;
   line-height: 1.6;
@@ -45,8 +41,8 @@ a:hover {
 /* Headshot formatting */
 .headshot-wrapper {
   position: absolute;
-  top: 100px;   /* move up or down */
-  left: 100px;  /* move left or right */
+  top: 200px;   /* move up or down */
+  left: 200px;  /* move left or right */
   z-index: 10;
 }
 
