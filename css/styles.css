@@ -5,6 +5,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: pink !important;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: #222;
@@ -18,9 +23,6 @@ a:hover {
   text-decoration: underline;
 }
 
-body {
-  background: pink !important;
-}
 
 /* Header / Nav */
 .site-header {
