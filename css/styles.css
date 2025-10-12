@@ -156,6 +156,31 @@ a:hover {
 }
 
 
+.img-research {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.research-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text over the image if you want to overlay it */
+.research-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+
 .img-about {
   position: relative;
   display: flex;
@@ -180,19 +205,29 @@ a:hover {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
 }
 
-
-.research-bg {
-  background-image: url('../img/Bryce.jpeg');
+.img-consulting {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.goals-bg {
-  background-image: url('../img/summit_view.jpeg');
+.consulting-image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.consulting-bg {
-  background-image: url('../img/glacier_moraine.jpeg');
+/* Text over the image if you want to overlay it */
+.consulting-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
 }
-
 
 
 html {
