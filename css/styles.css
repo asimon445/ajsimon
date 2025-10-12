@@ -156,6 +156,40 @@ a:hover {
   }
 }
 
+
+/* Shared background section base */
+.bg-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 8rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* Individual section backgrounds */
+.about-bg {
+  background-image: url('../img/MaroonBells.jpeg');
+}
+
+.research-bg {
+  background-image: url('../img/Bryce.jpeg');
+}
+
+.goals-bg {
+  background-image: url('../img/summit_view.jpeg');
+}
+
+.consulting-bg {
+  background-image: url('../img/glacier_moraine.jpeg');
+}
+
+
+
 html {
   scroll-behavior: smooth;
 }
