@@ -182,9 +182,9 @@ a:hover {
 
 .research-heading {
   position: absolute;
-  top: 50px;
+  top: 20px;
   left: 265px; /* match your name's horizontal alignment */
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: white;
   z-index: 2;
