@@ -28,20 +28,24 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2.5rem;
+  padding: 1.25rem 2rem;
   z-index: 999;
 }
 
+/* Move your name to the right slightly */
 .site-title {
   color: white;
   font-family: 'Merriweather', serif;
-  font-size: 2rem;     /* Bigger text */
+  font-size: 2rem;
   font-weight: 700;
+  padding-left: 80px;  /* ⬅️ adjust this to align above headshot */
 }
 
+/* Move your nav links inward from the right */
 .floating-nav {
   display: flex;
-  gap: 1.75rem;
+  gap: 1.5rem;
+  padding-right: 40px;  /* ⬅️ tweak this to your taste */
 }
 
 .floating-nav a {
@@ -50,10 +54,6 @@ a:hover {
   font-weight: 600;
   font-size: 1rem;
   transition: color 0.3s ease;
-}
-
-.floating-nav a:hover {
-  color: #ffeeaa;
 }
 
 
