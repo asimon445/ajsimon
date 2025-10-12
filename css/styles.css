@@ -40,6 +40,16 @@ a:hover {
   padding-left: 265px;  /* ⬅️ adjust this to align above headshot */
 }
 
+.section-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  padding-top: 3rem;
+  padding-left: 265px;  /* Match this to the left padding of your name */
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
 /* Move your nav links inward from the right */
 .floating-nav {
   display: flex;
@@ -155,36 +165,6 @@ a:hover {
   }
 }
 
-
-/* Shared background section base */
-/*.bg-section {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  padding: 8rem 2rem;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-}
-/*
-
-/* Individual section backgrounds */
-/* .about-bg {
-  height: 80vh;
-  background-image: url('../img/MaroonBells.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-*/
 
 .img-about {
   position: relative;
