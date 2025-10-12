@@ -45,7 +45,7 @@ a:hover {
 .floating-nav {
   display: flex;
   gap: 1.5rem;
-  padding-right: 40px;  /* ⬅️ tweak this to your taste */
+  padding-right: 200px;  /* ⬅️ tweak this to your taste */
 }
 
 .floating-nav a {
