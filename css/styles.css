@@ -157,7 +157,7 @@ a:hover {
 
 
 /* Shared background section base */
-.bg-section {
+/*.bg-section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -169,6 +169,7 @@ a:hover {
   justify-content: center;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
+/*
 
 /* Individual section backgrounds */
 .about-bg {
