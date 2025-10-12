@@ -19,27 +19,42 @@ a:hover {
   text-decoration: underline;
 }
 
-.floating-nav {
+
+.top-bar {
   position: absolute;
-  top: 30px;
-  left: 60%;
-  transform: translateX(-50%);
-  z-index: 999;
+  top: 0;
+  left: 0;
   display: flex;
+  align-items: center;
   gap: 2rem;
+  padding: 1.25rem 2rem;
+  z-index: 999;
+}
+
+.site-title {
+  color: white;
+  font-family: 'Merriweather', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.floating-nav {
+  display: flex;
+  gap: 1.5rem;
 }
 
 .floating-nav a {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
 .floating-nav a:hover {
   color: #ffeeaa;
 }
+
 
 /* Header / Nav */
 .site-header {
