@@ -22,7 +22,7 @@ a:hover {
 .floating-nav {
   position: absolute;
   top: 30px;
-  left: 40%;
+  left: 60%;
   transform: translateX(-50%);
   z-index: 999;
   display: flex;
