@@ -172,7 +172,14 @@ a:hover {
 
 /* Individual section backgrounds */
 .about-bg {
+  height: 80vh;
   background-image: url('../img/MaroonBells.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .research-bg {
