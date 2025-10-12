@@ -174,13 +174,15 @@ a:hover {
 .about-bg {
   height: 80vh;
   background-image: url('../img/MaroonBells.jpeg');
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+
 
 .research-bg {
   background-image: url('../img/Bryce.jpeg');
