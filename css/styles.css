@@ -40,16 +40,6 @@ a:hover {
   padding-left: 265px;  /* ⬅️ adjust this to align above headshot */
 }
 
-.section-heading {
-  font-size: 3rem;
-  font-weight: 700;
-  color: white;
-  padding-top: 3rem;
-  padding-left: 265px;  /* Match this to the left padding of your name */
-  margin-bottom: 2rem;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-}
-
 /* Move your nav links inward from the right */
 .floating-nav {
   display: flex;
