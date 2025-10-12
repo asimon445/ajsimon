@@ -19,27 +19,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.floating-nav {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
-  display: flex;
-  gap: 2rem;
-}
-
-.floating-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.floating-nav a:hover {
-  color: #ffeeaa;
-}
 
 /* Header / Nav */
 .site-header {
