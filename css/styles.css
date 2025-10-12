@@ -155,3 +155,14 @@ a:hover {
     transform: translateY(0);
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.content-section {
+  padding: 6rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #fff;
+}
