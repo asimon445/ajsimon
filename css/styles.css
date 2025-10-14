@@ -141,6 +141,12 @@ a:hover {
   font-size: 1.2rem;
 }
 
+.hero-subtext-box {
+  width: 800px;     /* or % like 50% */
+  height: 400px;    /* optional – usually you can let it auto-size with padding */
+  padding: 1rem 1.5rem;
+}
+
 
 /* Intro / section styles */
 .intro {
