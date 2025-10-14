@@ -125,7 +125,7 @@ a:hover {
 
 
 .hero-subtext-box {
-  background: rgba(50, 50, 50, 0.82); /* dark grey, semi-transparent */
+  background: rgba(50, 50, 50, 0.9); /* dark grey, semi-transparent */
   border: 2px solid white;
   border-radius: 12px;
   padding: 1rem 1.5rem;
