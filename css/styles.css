@@ -147,6 +147,11 @@ a:hover {
   padding: 1rem 1.5rem;
 }
 
+.hero-subtext-box {
+  margin-left: 200px;       /* align left manually */
+  margin-right: auto;
+}
+
 
 /* Intro / section styles */
 .intro {
