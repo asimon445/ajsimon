@@ -77,7 +77,7 @@ a:hover {
 /* Headshot formatting */
 .headshot-wrapper {
   position: absolute;
-  top: 300px;   /* move up or down */
+  top: 250px;   /* move up or down */
   left: 200px;  /* move left or right */
   z-index: 10;
 }
@@ -144,7 +144,7 @@ a:hover {
 .hero-subtext-box {
   width: 800px;     /* or % like 50% */
   height: 700px;    /* optional – usually you can let it auto-size with padding */
-  margin-top: 150px;
+  margin-top: 100px;
   padding: 1rem 1.5rem;
 }
 
