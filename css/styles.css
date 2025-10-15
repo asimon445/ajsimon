@@ -128,7 +128,7 @@ a:hover {
   background: rgba(50, 50, 50, 0.9); /* dark grey, semi-transparent */
   border: 3px solid white;
   border-radius: 12px;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   display: inline-block;
   max-width: 80%;
   color: white;
@@ -144,8 +144,8 @@ a:hover {
 .hero-subtext-box {
   width: 800px;     /* or % like 50% */
   height: 700px;    /* optional – usually you can let it auto-size with padding */
-  margin-top: 75px;
-  padding: 1rem 1.5rem;
+  margin-top: 50px;
+  padding: 1.5rem 1.5rem;
 }
 
 .hero-subtext-box {
