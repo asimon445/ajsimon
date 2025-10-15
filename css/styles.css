@@ -77,7 +77,7 @@ a:hover {
 /* Headshot formatting */
 .headshot-wrapper {
   position: absolute;
-  top: 150px;   /* move up or down */
+  top: 300px;   /* move up or down */
   left: 200px;  /* move left or right */
   z-index: 10;
 }
