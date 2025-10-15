@@ -124,8 +124,8 @@ a:hover {
 }
 
 
-.hero-subtext-box {
-  background: rgba(50, 50, 50, 0.9); /* dark grey, semi-transparent */
+/*.hero-subtext-box {
+  background: rgba(50, 50, 50, 0.9); /* dark grey, semi-transparent 
   border: 3px solid white;
   border-radius: 12px;
   padding: 1.5rem 1.5rem;
@@ -142,15 +142,36 @@ a:hover {
 }
 
 .hero-subtext-box {
-  width: 800px;     /* or % like 50% */
-  height: 700px;    /* optional – usually you can let it auto-size with padding */
+  width: 800px;     /* or % like 50% 
+  height: 700px;    /* optional – usually you can let it auto-size with padding 
   margin-top: 50px;
   padding: 1.5rem 1.5rem;
 }
 
 .hero-subtext-box {
-  margin-left: 500px;       /* align left manually */
+  margin-left: 500px;       /* align left manually 
   margin-right: auto;
+}*/
+
+.hero-subtext-box {
+  background: rgba(50, 50, 50, 0.9);  /* dark grey, semi-transparent */
+  border: 3px solid white;
+  border-radius: 12px;
+  color: white;
+  text-align: justify;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+  /* Size and position */
+  width: 800px;
+  height: 700px;
+  margin-top: 50px;
+  margin-left: 500px;
+
+  /* Flexbox for vertical centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertically center */
+  padding: 2rem;             /* padding around content */
 }
 
 
