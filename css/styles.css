@@ -94,7 +94,7 @@ a:hover {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 80vh;
+  height: 100vh;  /* was 80vh */
   background-image: url('../img/LandsEnd.jpeg');
   background-size: cover;
   background-position: center;
