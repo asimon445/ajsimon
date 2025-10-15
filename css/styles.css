@@ -132,7 +132,7 @@ a:hover {
   display: inline-block;
   max-width: 80%;
   color: white;
-  text-align: center;
+  text-align: justify;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
