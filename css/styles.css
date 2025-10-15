@@ -144,7 +144,7 @@ a:hover {
 .hero-subtext-box {
   width: 800px;     /* or % like 50% */
   height: 700px;    /* optional – usually you can let it auto-size with padding */
-  margin-top: 300px;
+  margin-top: 150px;
   padding: 1rem 1.5rem;
 }
 
