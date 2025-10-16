@@ -300,6 +300,17 @@ a:hover {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
 }
 
+.consulting-heading {
+  position: absolute;
+  top: 20px;
+  left: 265px; /* match your name's horizontal alignment */
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  z-index: 2;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
 
 html {
   scroll-behavior: smooth;
