@@ -84,11 +84,8 @@ a:hover {
 
   padding: 0 2rem;
 
-  /* translucent black over the animated network */
-  background: rgba(0, 0, 0, 0.82);
-
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  /* clearly translucent */
+  background: rgba(0, 0, 0, 0.45) !important;
 
   z-index: 100;
 }
