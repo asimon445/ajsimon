@@ -66,24 +66,37 @@ a:hover {
 
 
 /* =========================================================
-   TOP NAVIGATION
+   HEADER BARS
    ========================================================= */
 
-.top-bar {
+.section-header-bar {
   position: absolute;
 
   top: 0;
   left: 0;
 
   width: 100%;
+  min-height: 105px;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
-  padding: 1.25rem 2rem;
+  padding: 0 2rem;
+
+  /* hides animated network behind the header */
+  background: #000;
 
   z-index: 100;
+}
+
+
+/* =========================================================
+   TOP NAVIGATION
+   ========================================================= */
+
+.top-bar {
+  padding: 0 2rem;
 }
 
 
@@ -99,16 +112,20 @@ a:hover {
 }
 
 
-.floating-nav {
+.floating-nav,
+.section-nav {
   display: flex;
 
   gap: 1.5rem;
 
   padding-right: 300px;
+
+  align-items: center;
 }
 
 
-.floating-nav a {
+.floating-nav a,
+.section-nav a {
   color: white;
 
   text-decoration: none;
@@ -123,7 +140,8 @@ a:hover {
 }
 
 
-.floating-nav a:hover {
+.floating-nav a:hover,
+.section-nav a:hover {
   opacity: 0.65;
   text-decoration: none;
 }
@@ -254,26 +272,17 @@ a:hover {
 
   background: transparent;
 
-  padding: 8rem 2rem;
+  padding: 10rem 2rem 8rem 2rem;
 }
 
 
-/*
-   Subtle alternating darkness gives the sections a little
-   visual separation while still allowing the connectome
-   background to remain visible.
-*/
+/* Keep all section backgrounds transparent so the
+   connectome remains visible outside the header bars */
 
-#research {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-#about {
-  background: rgba(0, 0, 0, 0.18);
-}
-
+#research,
+#about,
 #consulting {
-  background: rgba(0, 0, 0, 0.05);
+  background: transparent;
 }
 
 
@@ -282,10 +291,9 @@ a:hover {
    ========================================================= */
 
 .section-heading {
-  position: absolute;
+  position: static;
 
-  top: 40px;
-  left: 265px;
+  margin-left: 265px;
 
   font-family: 'Merriweather', serif;
 
@@ -297,8 +305,7 @@ a:hover {
 
   z-index: 2;
 
-  text-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: none;
 }
 
 
@@ -369,8 +376,13 @@ a:hover {
     padding-left: 40px;
   }
 
-  .floating-nav {
+  .floating-nav,
+  .section-nav {
     padding-right: 40px;
+  }
+
+  .section-heading {
+    margin-left: 40px;
   }
 
   .headshot-wrapper {
@@ -379,7 +391,7 @@ a:hover {
     top: auto;
     left: auto;
 
-    margin-top: 120px;
+    margin-top: 140px;
     margin-bottom: 2rem;
   }
 
@@ -402,10 +414,6 @@ a:hover {
     max-width: 800px;
   }
 
-  .section-heading {
-    left: 60px;
-  }
-
 }
 
 
@@ -415,12 +423,20 @@ a:hover {
 
 @media (max-width: 750px) {
 
-  .top-bar {
+  .section-header-bar {
+    min-height: 135px;
+
     flex-direction: column;
 
-    gap: 0.75rem;
+    justify-content: center;
 
-    padding: 1rem;
+    gap: 0.6rem;
+
+    padding: 0.75rem 1rem;
+  }
+
+  .top-bar {
+    padding: 0.75rem 1rem;
   }
 
   .site-title {
@@ -429,7 +445,14 @@ a:hover {
     font-size: 2.2rem;
   }
 
-  .floating-nav {
+  .section-heading {
+    margin-left: 0;
+
+    font-size: 2.2rem;
+  }
+
+  .floating-nav,
+  .section-nav {
     padding-right: 0;
 
     gap: 1rem;
@@ -439,7 +462,8 @@ a:hover {
     justify-content: center;
   }
 
-  .floating-nav a {
+  .floating-nav a,
+  .section-nav a {
     font-size: 0.95rem;
   }
 
@@ -464,18 +488,10 @@ a:hover {
 
   .page-section {
     padding:
-      8rem
+      11rem
       1.25rem
       5rem
       1.25rem;
-  }
-
-  .section-heading {
-    left: 30px;
-
-    top: 35px;
-
-    font-size: 2.3rem;
   }
 
   .section-text {
