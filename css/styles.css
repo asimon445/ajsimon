@@ -424,15 +424,27 @@ a:hover {
 @media (max-width: 750px) {
 
   .section-header-bar {
-    min-height: 135px;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    gap: 0.6rem;
-
-    padding: 0.75rem 1rem;
+     position: absolute;
+   
+     top: 0;
+     left: 0;
+   
+     width: 100%;
+     min-height: 105px;
+   
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+   
+     padding: 0 2rem;
+   
+     /* translucent black over the animated network */
+     background: rgba(0, 0, 0, 0.82);
+   
+     backdrop-filter: blur(3px);
+     -webkit-backdrop-filter: blur(3px);
+   
+     z-index: 100;
   }
 
   .top-bar {
