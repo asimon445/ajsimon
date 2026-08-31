@@ -84,10 +84,14 @@ a:hover {
 
   padding: 0 2rem;
 
-  /* hides animated network behind the header */
-  background: #000;
+  /* translucent black over the animated network */
+  background: rgba(0, 0, 0, 0.82);
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 
   z-index: 100;
+}
 }
 
 
