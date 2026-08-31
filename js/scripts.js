@@ -14,7 +14,7 @@ function resizeCanvas() {
 
   scale = Math.max(
     1,
-    Math.min(1.8, window.innerWidth / 900)
+    Math.min(2.4, window.innerWidth / 900)
   );
 }
 
