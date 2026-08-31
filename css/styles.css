@@ -1,324 +1,489 @@
 
-/* Base / reset */
+/* =========================================================
+   BASE / RESET
+   ========================================================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  background: #000;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #222;
+  color: white;
   line-height: 1.6;
+  background: #000;
+  overflow-x: hidden;
 }
+
+
+/* =========================================================
+   ANIMATED NETWORK BACKGROUND
+   ========================================================= */
+
+#network-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  background: #000;
+}
+
+
+/* All actual website content appears above the canvas */
+
+.site-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
 a {
-  color: #0055aa;
+  color: white;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
+
+/* =========================================================
+   TOP NAVIGATION
+   ========================================================= */
+
 .top-bar {
   position: absolute;
+
   top: 0;
   left: 0;
+
   width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 1.25rem 2rem;
-  z-index: 999;
+
+  z-index: 100;
 }
 
-/* Move your name to the right slightly */
+
 .site-title {
   color: white;
+
   font-family: 'Merriweather', serif;
+
   font-size: 3rem;
   font-weight: 800;
-  padding-left: 265px;  /* ⬅️ adjust this to align above headshot */
+
+  padding-left: 265px;
 }
 
-/* Move your nav links inward from the right */
+
 .floating-nav {
   display: flex;
+
   gap: 1.5rem;
-  padding-right: 300px;  /* ⬅️ tweak this to your taste */
+
+  padding-right: 300px;
 }
+
 
 .floating-nav a {
   color: white;
+
   text-decoration: none;
+
   font-weight: 600;
+
   font-size: 1.25rem;
-  transition: color 0.3s ease;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
 }
 
 
-/* Header / Nav */
-.site-header {
-  position: sticky;
-  top: 0;
-  background: rgba(255, 255, 255, 0.95);
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.floating-nav a:hover {
+  opacity: 0.65;
+  text-decoration: none;
 }
-.nav-bar {
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
   display: flex;
-  gap: 1.5rem;
-  padding: 1rem 2rem;
+
+  align-items: center;
   justify-content: center;
-}
-.nav-bar a {
-  font-weight: 600;
+
+  text-align: center;
+
+  background: transparent;
 }
 
-/* Headshot formatting */
+
+/* =========================================================
+   HEADSHOT
+   ========================================================= */
+
 .headshot-wrapper {
   position: absolute;
-  top: 250px;   /* move up or down */
-  left: 200px;  /* move left or right */
+
+  top: 250px;
+  left: 200px;
+
   z-index: 10;
 }
 
+
 .headshot {
-  width: 400px;  /* smaller */
+  width: 400px;
   height: 400px;
-  border-radius: 100%;
+
+  border-radius: 50%;
+
   object-fit: cover;
-  border: 3px solid white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+
+  border: 3px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(255, 255, 255, 0.06);
 }
 
-/* Hero Section */
-.hero {
-  position: relative;
-  height: 100vh;  /* was 80vh */
-  background-image: url('../img/LandsEnd.jpeg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-}
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+
 .hero-content {
   position: relative;
+
   color: #fff;
-  max-width: 90%;
+
+  width: 100%;
+  max-width: 1600px;
+
   animation: fadeInUp 1s ease forwards;
-}
-.hero-content h1 {
-  font-family: 'Merriweather', serif;
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-.hero-content p {
-  font-size: 1.3rem;
 }
 
 
 .hero-subtext-box {
-  background: rgba(50, 50, 50, 0.9);  /* dark grey, semi-transparent */
-  border: 3px solid white;
+  background: rgba(15, 15, 15, 0.82);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
   border-radius: 12px;
+
   color: white;
+
   text-align: justify;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  line-height: 1.3;
 
-  /* Size and position */
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.65);
+
+  line-height: 1.45;
+
   width: 800px;
-  height: 700px;
+
   margin-top: 50px;
-  margin-left: 500px;
+  margin-left: 700px;
 
-  /* Flexbox for vertical centering */
   display: flex;
+
   flex-direction: column;
-  justify-content: center;   /* vertically center */
-  padding: 2rem;             /* padding around content */
+
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  padding: 2rem;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 
-/* Intro / section styles */
-.intro {
-  padding: 4rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+.hero-subtext-box p {
+  font-size: 1.05rem;
 }
-.intro h2 {
+
+
+/* =========================================================
+   MAIN SECTIONS
+   ========================================================= */
+
+.page-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  padding: 8rem 2rem;
+}
+
+
+/*
+   Subtle alternating darkness gives the sections a little
+   visual separation while still allowing the connectome
+   background to remain visible.
+*/
+
+#research {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#about {
+  background: rgba(0, 0, 0, 0.18);
+}
+
+#consulting {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.section-heading {
+  position: absolute;
+
+  top: 40px;
+  left: 265px;
+
   font-family: 'Merriweather', serif;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+
+  font-size: 3rem;
+
+  font-weight: 700;
+
+  color: white;
+
+  z-index: 2;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* Footer */
-.site-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #f5f5f5;
-  margin-top: 4rem;
+
+/* =========================================================
+   SECTION TEXT
+   ========================================================= */
+
+.section-text {
+  background: rgba(15, 15, 15, 0.80);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  border-radius: 12px;
+
+  padding: 2.5rem;
+
+  color: white;
+
+  width: 800px;
+  max-width: 70%;
+
+  text-align: justify;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.65);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  z-index: 2;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
-/* Animations */
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
 @keyframes fadeInUp {
+
   0% {
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
+
 }
 
 
-.img-research {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* =========================================================
+   TABLET / SMALLER SCREENS
+   ========================================================= */
 
-.research-image {
-  width: 100%;
-  height: 100vh;  /* height: auto; */
-  display: block;
-}
+@media (max-width: 1200px) {
 
-/* Text over the image if you want to overlay it */
-/* .research-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-} */
+  .site-title {
+    padding-left: 40px;
+  }
 
-.research-heading {
-  position: absolute;
-  top: 20px;
-  left: 265px; /* match your name's horizontal alignment */
-  font-size: 3rem;
-  font-weight: 700;
-  color: white;
-  z-index: 2;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-}
+  .floating-nav {
+    padding-right: 40px;
+  }
 
-.research-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(50, 50, 50, 0.9);   /* dark grey transparent box */
-  border: 3px solid white;
-  border-radius: 12px;
-  padding: 2rem;
-  color: white;
-  max-width: 70%;
-  width: 800px;
-  height: auto;
-  text-align: justify;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;  /* space between paragraphs */
-  z-index: 2;
+  .headshot-wrapper {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    margin-top: 120px;
+    margin-bottom: 2rem;
+  }
+
+  .headshot {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero {
+    flex-direction: column;
+
+    padding-bottom: 5rem;
+  }
+
+  .hero-subtext-box {
+    margin: 0 auto;
+
+    width: 80%;
+
+    max-width: 800px;
+  }
+
+  .section-heading {
+    left: 60px;
+  }
+
 }
 
 
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
-.img-about {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+@media (max-width: 750px) {
 
-.about-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  .top-bar {
+    flex-direction: column;
 
-/* Text over the image if you want to overlay it */
-.about-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-}
+    gap: 0.75rem;
 
-.about-heading {
-  position: absolute;
-  top: 20px;
-  left: 265px; /* match your name's horizontal alignment */
-  font-size: 3rem;
-  font-weight: 700;
-  color: white;
-  z-index: 2;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-}
+    padding: 1rem;
+  }
 
+  .site-title {
+    padding-left: 0;
 
+    font-size: 2.2rem;
+  }
 
-.img-consulting {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .floating-nav {
+    padding-right: 0;
 
-.consulting-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+    gap: 1rem;
 
-/* Text over the image if you want to overlay it */
-.consulting-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-}
+    flex-wrap: wrap;
 
-.consulting-heading {
-  position: absolute;
-  top: 20px;
-  left: 265px; /* match your name's horizontal alignment */
-  font-size: 3rem;
-  font-weight: 700;
-  color: white;
-  z-index: 2;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-}
+    justify-content: center;
+  }
 
+  .floating-nav a {
+    font-size: 0.95rem;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  .headshot-wrapper {
+    margin-top: 180px;
+  }
 
-.content-section {
-  padding: 6rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  color: #fff;
+  .headshot {
+    width: 230px;
+    height: 230px;
+  }
+
+  .hero-subtext-box {
+    width: 90%;
+
+    padding: 1.5rem;
+  }
+
+  .hero-subtext-box p {
+    font-size: 0.95rem;
+  }
+
+  .page-section {
+    padding:
+      8rem
+      1.25rem
+      5rem
+      1.25rem;
+  }
+
+  .section-heading {
+    left: 30px;
+
+    top: 35px;
+
+    font-size: 2.3rem;
+  }
+
+  .section-text {
+    max-width: 100%;
+
+    width: 100%;
+
+    padding: 1.5rem;
+  }
+
 }
