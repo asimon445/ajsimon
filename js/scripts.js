@@ -6,10 +6,16 @@ const canvas = document.getElementById("network-bg");
 const ctx = canvas.getContext("2d");
 
 let particles = [];
+let scale = 1;
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+
+  scale = Math.max(
+    1,
+    Math.min(1.8, window.innerWidth / 900)
+  );
 }
 
 class Particle {
@@ -17,10 +23,11 @@ class Particle {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
 
-    this.vx = (Math.random() - 0.5) * 0.15;
-    this.vy = (Math.random() - 0.5) * 0.15;
+    this.vx = (Math.random() - 0.5) * 0.12;
+    this.vy = (Math.random() - 0.5) * 0.12;
 
-    this.radius = Math.random() * 1.5 + 1;
+    this.radius =
+      (Math.random() * 1.5 + 1) * scale;
   }
 
   update() {
@@ -47,7 +54,9 @@ class Particle {
       Math.PI * 2
     );
 
-    ctx.fillStyle = "rgba(255,255,255,0.8)";
+    ctx.fillStyle =
+      "rgba(255,255,255,0.85)";
+
     ctx.fill();
   }
 }
@@ -55,12 +64,20 @@ class Particle {
 function createParticles() {
   particles = [];
 
-  for (let i = 0; i < 120; i++) {
+  const particleCount =
+    window.innerWidth > 1200
+      ? 160
+      : 120;
+
+  for (let i = 0; i < particleCount; i++) {
     particles.push(new Particle());
   }
 }
 
 function drawConnections() {
+  const connectionDistance =
+    150 * scale;
+
   for (let i = 0; i < particles.length; i++) {
 
     for (let j = i + 1; j < particles.length; j++) {
@@ -76,10 +93,10 @@ function drawConnections() {
       const distance =
         Math.sqrt(dx * dx + dy * dy);
 
-      if (distance < 150) {
+      if (distance < connectionDistance) {
 
         const opacity =
-          (1 - distance / 150) * 0.35;
+          (1 - distance / connectionDistance) * 0.42;
 
         ctx.beginPath();
 
@@ -96,7 +113,8 @@ function drawConnections() {
         ctx.strokeStyle =
           `rgba(255,255,255,${opacity})`;
 
-        ctx.lineWidth = 0.8;
+        ctx.lineWidth =
+          0.9 * scale;
 
         ctx.stroke();
       }
