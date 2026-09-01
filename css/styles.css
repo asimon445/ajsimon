@@ -348,6 +348,104 @@ a:hover {
   -webkit-backdrop-filter: blur(4px);
 }
 
+/* =========================================================
+   RESEARCH SECTION
+   ========================================================= */
+
+/* Holds both research text boxes */
+.research-content {
+  width: 1050px;
+  max-width: 82%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+
+  z-index: 2;
+}
+
+
+/* Override the standard 800px section-text width
+   only inside the research section */
+.research-content .section-text {
+  width: 100%;
+  max-width: none;
+}
+
+
+/* Research boxes */
+.research-box {
+  line-height: 1.55;
+}
+
+
+/* Numbered research directions */
+.research-list {
+  padding-left: 1.8rem;
+  margin-top: 0.25rem;
+}
+
+
+.research-list li {
+  padding-left: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+
+.research-list li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PUBLICATIONS
+   ========================================================= */
+
+.publications-box {
+  text-align: left;
+}
+
+
+.publications-box h3 {
+  font-family: 'Merriweather', serif;
+
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  margin-bottom: 0.5rem;
+}
+
+
+.publications-box p {
+  margin-bottom: 0.5rem;
+}
+
+
+.publications-box a {
+  color: white;
+
+  text-decoration: underline;
+
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-underline-offset: 3px;
+
+  transition: opacity 0.25s ease;
+}
+
+
+.publications-box a:hover {
+  opacity: 0.65;
+}
+
+
+.publication-note {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
 
 /* =========================================================
    ANIMATIONS
@@ -515,5 +613,26 @@ a:hover {
 
     padding: 1.5rem;
   }
+
+   .research-content {
+     width: 100%;
+     max-width: 100%;
+   
+     gap: 1.5rem;
+   
+     margin-top: 1rem;
+   }
+   
+   
+   .research-box {
+     width: 100%;
+   
+     padding: 1.5rem;
+   }
+   
+   
+   .publications-box h3 {
+     font-size: 1.5rem;
+   }
 
 }
