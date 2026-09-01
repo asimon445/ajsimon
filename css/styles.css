@@ -316,7 +316,7 @@ a:hover {
    ========================================================= */
 
 .section-text {
-  background: rgba(15, 15, 15, 0.80);
+  background: rgba(15, 15, 15, 0.82);
 
   border: 1px solid rgba(255, 255, 255, 0.4);
 
@@ -330,6 +330,8 @@ a:hover {
   max-width: 70%;
 
   text-align: justify;
+   
+  font-size: 1.15rem; 
 
   box-shadow:
     0 8px 30px rgba(0, 0, 0, 0.65);
