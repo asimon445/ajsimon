@@ -377,6 +377,16 @@ a:hover {
 
 
 /* Research boxes */
+
+.research-box h3 {
+  font-family: 'Open Sans', sans-serif;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  margin-bottom: 0.5rem;
+}
+
 .research-box {
   line-height: 1.55;
 }
@@ -410,7 +420,7 @@ a:hover {
 
 
 .publications-box h3 {
-  font-family: 'Merriweather', serif;
+  font-family: 'Open Sans', sans-serif;
 
   font-size: 1.5rem;
   font-weight: 700;
